@@ -7,9 +7,9 @@ namespace :dev do
   end
 
   def add_articles
-    50.times do |i|
+    50.times do
       Article.create(
-        title: "Article #{i}" + Faker::Lorem.sentence.delete("."),
+        title: "Article " + Faker::Lorem.sentence.delete("."),
         body: Faker::Lorem.paragraph(sentence_count: rand(100..200)),
       )
     end
